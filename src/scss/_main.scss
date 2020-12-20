@@ -2,3 +2,10 @@ body {
   font-family: "Sniglet", cursive;
   background: $body-bcg-clr;
 }
+
+main {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}

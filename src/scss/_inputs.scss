@@ -1,8 +1,11 @@
-input {
+input,
+select {
   font-family: "Sniglet", cursive;
+  background: $el-bcg;
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: none;
   border: 1px solid $acc-clr;
 }
@@ -11,4 +14,61 @@ input::placeholder {
   color: $text-clr;
   font-size: 0.9rem;
   padding: 0 0.3em;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.8em 0.5em;
+  margin: 1em 0;
+  font-size: 1rem;
+  @include btn-input-styles;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  width: 100vw;
+  &__item {
+    width: 80%;
+    max-width: 450px;
+    padding: 0.8em 0.5em;
+    font-size: 1rem;
+    color: $text-clr;
+    border-radius: $radius;
+    border: none;
+    box-shadow: $box-shadow;
+  }
+
+  &__button {
+    padding: 0.8em 1em;
+    background: $acc-clr;
+    border-radius: $radius;
+  }
+}
+
+.radio-toolbar {
+  margin-bottom: 1em;
+
+  &__input {
+    position: fixed;
+    opacity: 0;
+    width: 0;
+  }
+
+  &__input[type="radio"]:checked + label {
+    background-color: $acc-clr;
+    color: $light-acc-clr;
+  }
+
+  &__label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 0.4em;
+    background: $light-acc-clr;
+    border-radius: $radius;
+  }
+  &__label:hover {
+    cursor: pointer;
+  }
 }
