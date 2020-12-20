@@ -1,0 +1,32 @@
+main {
+  width: 100vw;
+  padding: 0 1.5em;
+  margin: 0 auto;
+}
+
+.user-action {
+  display: flex;
+  margin: 4em 0 2em 0;
+  gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 2em;
+
+  &__item {
+    width: 20em;
+    padding: 0.8em 0.5em;
+    font-size: 1rem;
+    color: $text-clr;
+    border-radius: $radius;
+    border: none;
+    box-shadow: $box-shadow;
+  }
+
+  &__button {
+    padding: 0.8em 1em;
+    background: $acc-clr;
+    border-radius: $radius;
+  }
+}

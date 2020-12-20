@@ -1,0 +1,25 @@
+button,
+a {
+  font-family: "Sniglet", cursive;
+  color: $text-clr;
+}
+
+.button__icon {
+  margin-left: 0.5em;
+}
+
+.header__button {
+  background: transparent;
+}
+
+.user-action__button--shadow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 10em;
+  padding: 1em 0.5em;
+  font-size: 1rem;
+  background: $el-bcg;
+  border-radius: $radius;
+  box-shadow: $box-shadow;
+}

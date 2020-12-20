@@ -1,0 +1,14 @@
+input {
+  font-family: "Sniglet", cursive;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid $acc-clr;
+}
+
+input::placeholder {
+  color: $text-clr;
+  font-size: 0.9rem;
+  padding: 0 0.3em;
+}
