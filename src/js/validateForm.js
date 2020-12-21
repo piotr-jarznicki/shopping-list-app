@@ -1,4 +1,4 @@
-import { form, submitResponse } from "./htmlHandler";
+import { form } from "./htmlHandler";
 import { resetForm } from "./resetForm";
 export const validateForm = () => {
   // Checking if user inserted correct data

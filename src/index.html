@@ -39,7 +39,16 @@
           data-menu-bars
         />
       </button>
-
+      <section class="products-info">
+        <p class="products-info__text">
+          Total products:
+          <span data-products-pieces class="products-info">0 pcs</span>
+        </p>
+        <p class="products-info__text">
+          Total products weight:
+          <span data-products-weight class="products-info">0 kg</span>
+        </p>
+      </section>
       <nav class="nav" data-nav>
         <ul class="nav__item">
           <li class="nav__list list">
@@ -150,7 +159,16 @@
       </div>
       <section class="products-container">
         <h2 class="category-heading">Category: All products</h2>
+        <ul class="products-list" data-products-list></ul>
       </section>
+      <button
+        style="display: none;"
+        type="submit"
+        class="form__button"
+        data-submit-form
+      >
+        Add
+      </button>
     </main>
   </body>
   <!-- Main js file -->

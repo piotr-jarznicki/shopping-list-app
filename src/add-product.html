@@ -31,7 +31,24 @@
         alt="Blueish website logo, twisted shopping trolley on a circle with shop name Grocery next to it."
         class="header__logo"
       />
-
+     <button class="header__button header-button">
+        <img
+          src="./img/icons/bars-icon.svg"
+          alt="Blueish bars stacked on top of each other."
+          class="header-button__image"
+          data-menu-bars
+        />
+      </button>
+       <section class="products-info">
+        <p class="products-info__text">
+          Total products:
+          <span data-products-pieces class="products-info">0 pcs</span>
+        </p>
+        <p class="products-info__text">
+          Total products weight:
+          <span data-products-weight class="products-info">0 kg</span>
+        </p>
+      </section>
       <nav class="nav" data-nav>
         <ul class="nav__item">
           <li class="nav__list list">
@@ -103,7 +120,8 @@
 
     <main>
       <h1 class="page__heading">Add new product</h1>
-      <form class="form" action="">
+      <div class="message-container" data-submit-response></div>
+      <form class="form"action="" data-form>
         <input type="text" class="form__input" placeholder="Product name" />
         <select
           name="categories"
@@ -126,6 +144,7 @@
             class="radio-toolbar__input"
             name="radioAmount"
             value="Kilos"
+            checked
           />
           <label class="radio-toolbar__label" for="radioKilos">Kilos</label>
 
@@ -138,9 +157,12 @@
           />
           <label class="radio-toolbar__label" for="radioPieces">Pieces</label>
         </section>
-        <button type="submit" class="form__button">Add</button>
+        <button type="submit" class="form__button" data-submit-form >Add</button>
       </form>
+    <section style = "display:none" class="products-container">
 
+        <ul class="products-list" data-products-list></ul>
+      </section>
       <a href="index.html" class="user-action__button button">
         <img
           src="img/icons/arrow-icon.svg"

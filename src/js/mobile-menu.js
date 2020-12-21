@@ -1,8 +1,4 @@
-const get = (...args) => document.querySelector(...args);
-const getAll = (...args) => document.querySelectorAll(...args);
-
-const nav = get("[data-nav]");
-const menuBars = get("[data-menu-bars]");
+import { nav, menuBars } from "./htmlHandler";
 
 const toggleMobileMenu = () => {
   nav.classList.toggle("display");
