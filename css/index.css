@@ -88,6 +88,32 @@ main {
   max-width: 500px;
 }
 
+.message-container {
+  padding: 1em 2em;
+  background: #e6edfc;
+  color: #8ba8e5;
+}
+
+.product {
+  padding: 1.4em 0.5em;
+  font-size: 1.2rem;
+  margin: 2em 0;
+  width: 30vw;
+  color: #959595;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 1px 1px 5px 0px #cecece;
+}
+
+.amount-span {
+  position: absolute;
+  padding: 0.3em 0.8em;
+  margin: -4em -2.5em;
+  font-size: 1rem;
+  background: #e6edfc;
+  border-radius: 2px;
+}
+
 button,
 a {
   font-family: "Sniglet", cursive;
@@ -260,6 +286,16 @@ main {
   display: flex;
   margin: 4em 0 2em 0;
   gap: 20px;
+}
+
+.products-info {
+  width: 20em;
+  padding: 1em;
+  background: #294254;
+}
+
+.products-info__text {
+  color: #e6edfc;
 }
 
 .nav {
