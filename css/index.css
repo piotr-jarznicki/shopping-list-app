@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 img {
@@ -97,7 +97,7 @@ main {
 .product {
   padding: 1.4em 0.5em;
   font-size: 1.2rem;
-  margin: 2em 0;
+  margin: 3em 0;
   width: 30vw;
   color: #959595;
   border-radius: 2px;
@@ -109,6 +109,15 @@ main {
   position: absolute;
   padding: 0.3em 0.8em;
   margin: -4em -2.5em;
+  font-size: 1rem;
+  background: #e6edfc;
+  border-radius: 2px;
+}
+
+.category-span {
+  position: absolute;
+  padding: 0.3em 0.8em;
+  margin: 1em -2.5em;
   font-size: 1rem;
   background: #e6edfc;
   border-radius: 2px;
@@ -289,13 +298,24 @@ main {
 }
 
 .products-info {
-  width: 20em;
-  padding: 1em;
+  width: 80%;
+  padding: 0 0.4em;
+  border: 2px;
   background: #294254;
 }
 
 .products-info__text {
   color: #e6edfc;
+}
+
+.active {
+  background: #8ba8e5;
+  color: #e6edfc;
+}
+
+.catergory-data {
+  color: #8ba8e5;
+  margin-left: 0.2em;
 }
 
 .nav {
@@ -332,11 +352,16 @@ main {
 }
 
 .list__data {
-  position: absolute;
+  position: relative;
   right: -20%;
   padding: 0.3em 0.5em;
   background: #294254;
   border-radius: 2px;
+}
+
+.list:hover {
+  cursor: pointer;
+  background: #8ba8e5;
 }
 
 .display {
@@ -354,6 +379,8 @@ main {
     display: flex;
   }
   .header {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -375,6 +402,7 @@ main {
   }
   .nav__item {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -383,10 +411,13 @@ main {
     display: flex;
     align-items: center;
     position: relative;
-    width: 10em;
+    width: 30em;
     gap: 15px;
     margin-top: 2em;
     font-size: 1.2rem;
+  }
+  .list {
+    width: 100%;
   }
   .list__image {
     width: 24px;
