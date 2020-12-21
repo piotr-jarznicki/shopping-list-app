@@ -9,3 +9,5 @@ export const submitResponse = get("[data-submit-response]");
 export const productsList = get("[data-products-list]");
 export const amountOfProducts = get("[data-products-pieces]");
 export const weightOfProducts = get("[data-products-weight]");
+export const productsCategoryList = getAll("[data-category]");
+export const categorySpanText = get("[data-category-span]");

@@ -5,3 +5,4 @@ import "./getUserInput";
 import "./setProductToLocalStorage";
 import "./renderProducts";
 import "./handleFormSubmit";
+import "./handleClick";
