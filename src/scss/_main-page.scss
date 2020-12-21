@@ -9,3 +9,12 @@ main {
   margin: 4em 0 2em 0;
   gap: 20px;
 }
+
+.products-info {
+  width: 20em;
+  padding: 1em;
+  background: $nav-el-clr;
+  &__text {
+    color: $light-acc-clr;
+  }
+}
