@@ -24,5 +24,8 @@ export const createHtmlElement = (
     htmlElement.addEventListener("click", listener);
   }
 
+  if (element === "a") {
+    htmlElement.href = content;
+  }
   return htmlElement;
 };
