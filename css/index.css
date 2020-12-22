@@ -96,6 +96,9 @@ main {
 
 .product {
   padding: 1.4em 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   font-size: 1.2rem;
   margin: 3em 0;
   width: 30vw;
@@ -106,18 +109,16 @@ main {
 }
 
 .amount-span {
-  position: absolute;
-  padding: 0.3em 0.8em;
-  margin: -4em -2.5em;
+  width: 4em;
+  margin: 0 0.5em;
   font-size: 1rem;
   background: #e6edfc;
   border-radius: 2px;
 }
 
 .category-span {
-  position: absolute;
-  padding: 0.3em 0.8em;
-  margin: 1em -2.5em;
+  width: 5em;
+  margin: 0;
   font-size: 1rem;
   background: #e6edfc;
   border-radius: 2px;
@@ -170,7 +171,8 @@ a {
   transition: 0.3s;
 }
 
-.form__button:hover {
+.form__button:hover,
+.remove-product-button:hover {
   background: #6b89c9;
   cursor: pointer;
 }
@@ -193,6 +195,22 @@ a {
   background: #8ba8e5;
   color: #e6edfc;
   cursor: pointer;
+}
+
+.remove-product-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 2px;
+  background: #8ba8e5;
+  transition: 0.3s;
+}
+
+.button-icon {
+  width: 1.2em;
+  pointer-events: none;
 }
 
 .header {
@@ -300,6 +318,7 @@ main {
 .products-info {
   width: 80%;
   padding: 0 0.4em;
+  margin: 1em 0;
   border: 2px;
   background: #294254;
 }
@@ -309,7 +328,7 @@ main {
 }
 
 .active {
-  background: #8ba8e5;
+  background: #23cbd8;
   color: #e6edfc;
 }
 
@@ -361,7 +380,8 @@ main {
 
 .list:hover {
   cursor: pointer;
-  background: #8ba8e5;
+  background: #23cbd8;
+  color: #e6edfc;
 }
 
 .display {
@@ -393,12 +413,13 @@ main {
     width: 70vw;
   }
   .nav {
-    position: initial;
+    position: inherit;
     width: auto;
     min-height: 50vh;
     margin: 0 0.5em;
     padding: 1em 0 2em 0;
     background: transparent;
+    width: 100%;
   }
   .nav__item {
     display: flex;
@@ -410,13 +431,10 @@ main {
   .nav__list {
     display: flex;
     align-items: center;
-    position: relative;
-    width: 30em;
+    padding: 1em 2em;
     gap: 15px;
-    margin-top: 2em;
+    margin-top: 0.5em;
     font-size: 1.2rem;
-  }
-  .list {
     width: 100%;
   }
   .list__image {
