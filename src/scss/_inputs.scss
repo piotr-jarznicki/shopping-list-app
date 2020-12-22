@@ -1,6 +1,7 @@
 input,
 select {
   font-family: "Sniglet", cursive;
+
   background: $el-bcg;
 }
 
@@ -22,6 +23,10 @@ input::placeholder {
   margin: 1em 0;
   font-size: 1rem;
   @include btn-input-styles;
+}
+
+.form__input:focus {
+  margin: 15px 0;
 }
 
 .search-bar {
@@ -58,7 +63,7 @@ input::placeholder {
 
   &__input[type="radio"]:checked + label {
     background-color: $acc-clr;
-    color: $light-acc-clr;
+    color: $el-bcg;
   }
 
   &__label {

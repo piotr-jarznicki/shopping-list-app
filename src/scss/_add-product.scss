@@ -12,6 +12,7 @@
 }
 
 .message-container {
+  visibility: hidden;
   padding: 1em 2em;
   background: $light-acc-clr;
   color: $acc-clr;
@@ -26,6 +27,7 @@
   margin: 3em 0;
   width: 30vw;
   @include btn-input-styles;
+  background: $el-bcg;
 }
 
 .amount-span {
