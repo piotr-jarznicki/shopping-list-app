@@ -1,5 +1,6 @@
-import { productsCategoryList, categorySpanText } from "./htmlHandler";
-export const establishProductsCategory = (target) => {
+import { productsCategoryList } from "./htmlHandler";
+
+export const getCurrentActiveCategory = (target) => {
   let arrayOfProductsCategories = Array.from(productsCategoryList);
   // Making sure that only one category is active
   arrayOfProductsCategories = arrayOfProductsCategories.map((el) => {
@@ -14,5 +15,6 @@ export const establishProductsCategory = (target) => {
   const activeCategory = arrayOfProductsCategories.filter((el) =>
     el.classList.contains("active") ? el : false
   );
-  return activeCategory;
+  currentActiveCategory = activeCategory[0].dataset.category;
+  return activeCategory[0].dataset.category;
 };

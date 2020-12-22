@@ -1,4 +1,4 @@
-import { form, submitFormButton } from "./htmlHandler";
+import { form } from "./htmlHandler";
 export const getUserInput = () => {
   const productName = form[0].value;
   const productCategory = form[1].value;
@@ -12,9 +12,9 @@ export const getUserInput = () => {
 
   const product = {
     id: localStorage.length + 1,
-    productName,
-    productCategory,
-    productAmount,
+    name: productName,
+    category: productCategory,
+    amount: productAmount,
     amountType,
   };
 

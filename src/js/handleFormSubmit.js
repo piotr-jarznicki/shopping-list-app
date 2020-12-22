@@ -9,8 +9,9 @@ const handleFormSubmit = (e) => {
   const product = getUserInput();
   const isFormDataValid = validateForm();
   isFormDataValid ? setProductToLocalStorage(JSON.stringify(product)) : false;
-  displaySubmitResponse(isFormDataValid);
-  renderProducts();
+  displaySubmitResponse(isFormDataValid, product.name);
+  renderProducts("all");
 };
 
 submitFormButton.addEventListener("click", handleFormSubmit);
+// Change to form submit

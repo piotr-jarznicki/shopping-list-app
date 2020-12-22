@@ -1,19 +1,15 @@
-import { createProduct } from "./createProduct";
+import { createProducts } from "./createProducts";
 import { productsList, categorySpanText } from "./htmlHandler";
 export const renderProducts = (activeCategory) => {
-  const htmlProducts = createProduct();
+  const htmlProducts = createProducts();
   productsList.innerHTML = "";
-
-  if (!activeCategory[0]) {
-    htmlProducts.forEach((product) => productsList.appendChild(product));
-  } else if (activeCategory[0].dataset.category === "all") {
+  if (typeof activeCategory !== "string" || activeCategory === "all") {
     categorySpanText.textContent = "all products";
     htmlProducts.forEach((product) => productsList.appendChild(product));
   } else {
-    categorySpanText.textContent =
-      activeCategory[0].dataset.category + " " + "product";
+    categorySpanText.textContent = activeCategory + " " + "product";
     htmlProducts.forEach((product) => {
-      product.innerHTML.includes(activeCategory[0].dataset.category)
+      product.innerHTML.includes(activeCategory)
         ? productsList.appendChild(product)
         : false;
     });

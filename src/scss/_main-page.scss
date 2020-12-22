@@ -13,6 +13,7 @@ main {
 .products-info {
   width: 80%;
   padding: 0 0.4em;
+  margin: 1em 0;
   border: $radius;
   background: $nav-el-clr;
   &__text {
@@ -21,7 +22,7 @@ main {
 }
 
 .active {
-  background: $acc-clr;
+  background: #23cbd8;
   color: $light-acc-clr;
 }
 

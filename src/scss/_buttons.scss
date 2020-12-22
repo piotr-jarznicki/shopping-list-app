@@ -42,7 +42,8 @@ a {
   transition: 0.3s;
 }
 
-.form__button:hover {
+.form__button:hover,
+.remove-product-button:hover {
   background: #6b89c9;
   cursor: pointer;
 }
@@ -62,4 +63,20 @@ a {
   background: $acc-clr;
   color: $light-acc-clr;
   cursor: pointer;
+}
+
+.remove-product-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  border-radius: $radius;
+  background: $acc-clr;
+  transition: 0.3s;
+}
+
+.button-icon {
+  width: 1.2em;
+  pointer-events: none;
 }
