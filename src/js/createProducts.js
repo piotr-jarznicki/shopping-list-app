@@ -2,14 +2,10 @@ import { getProductsInfo } from "./getProductsInfo";
 import { removeProduct } from "./removeProduct";
 import { setProductsAmountInfo } from "./setProductsAmountInfo";
 import { createHtmlElement } from "./createHtmlElement";
+import { getDataFromLocalStorage } from "./getDataFromLocalStorage";
 export const createProducts = () => {
-  const products = [];
   const htmlProducts = [];
-  for (let i in localStorage) {
-    if (localStorage.hasOwnProperty(i) && localStorage[i] !== "INFO") {
-      products.push(JSON.parse(localStorage[i]));
-    }
-  }
+  const products = getDataFromLocalStorage();
 
   products.forEach((product) => {
     //  to use: element, imgSrc, id cssClass, children, content, listener;
@@ -58,7 +54,6 @@ export const createProducts = () => {
       null,
       removeProduct
     );
-
     const htmlProduct = createHtmlElement(
       "li",
       null,
