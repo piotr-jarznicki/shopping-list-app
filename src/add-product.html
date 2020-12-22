@@ -39,17 +39,18 @@
           data-menu-bars
         />
       </button>
-       <section class="products-info">
-        <p class="products-info__text">
+       <section style = "visibility:hidden" class="products-info">
+        <p>
           Total products:
           <span data-products-pieces class="products-info">0 pcs</span>
         </p>
-        <p class="products-info__text">
+        <p >
           Total products weight:
           <span data-products-weight class="products-info">0 kg</span>
         </p>
       </section>
-      <nav style = "opacity:.3" class="nav" data-nav>
+      <nav style = "visibility:hidden" class="nav" data-nav>
+        
         <ul class="nav__item">
           <li class="nav__list list">
             <img
@@ -154,7 +155,21 @@
         <button type="submit" class="form__button" data-submit-form >Add</button>
       </form>
     <section style = "display:none" class="products-container">
-
+       <input
+          type="search"
+          class="search-bar__item"
+          aria-label="Search through current products"
+          placeholder="Search products..."
+          data-search-input
+        />
+   <button class="user-action__button--shadow button" data-remove-products>
+          <img
+            src="img/icons/blue-trash-icon.svg"
+            alt="Blueish icon of a trash can"
+            class="button__icon"
+          />
+          Remove all products
+        </button>
         <ul class="products-list" data-products-list>
           <span class="catergory-data" data-category-span> all products</span>
 

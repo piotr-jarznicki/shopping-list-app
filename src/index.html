@@ -42,15 +42,27 @@
       <section class="products-info">
         <p class="products-info__text">
           Total products:
-          <span data-products-pieces class="products-info">0 pcs</span>
+          <span data-products-pieces> 0 pcs</span>
         </p>
         <p class="products-info__text">
           Total products weight:
-          <span data-products-weight class="products-info">0 kg</span>
+          <span data-products-weight> 0 kg</span>
         </p>
       </section>
       <nav class="nav" data-nav>
         <ul class="nav__item">
+          <!-- <li class="nav__list list">
+            <section class="products-info mobile">
+              <p class="products-inf__text">
+                Total products:
+                <span data-products-pieces class="products-info">0 pcs</span>
+              </p>
+              <p class="products-inf__text">
+                Total products weight:
+                <span data-products-weight class="products-info">0 kg</span>
+              </p>
+            </section>
+          </li> -->
           <li
             data-category="all"
             data-products-all
@@ -147,13 +159,13 @@
           Add product
         </a>
 
-        <button class="user-action__button--shadow button" data-clear-list>
+        <button class="user-action__button--shadow button" data-remove-products>
           <img
             src="img/icons/blue-trash-icon.svg"
             alt="Blueish icon of a trash can"
             class="button__icon"
           />
-          Clear list
+          Remove all products
         </button>
       </section>
       <div class="search-bar">
@@ -162,6 +174,7 @@
           class="search-bar__item"
           aria-label="Search through current products"
           placeholder="Search products..."
+          data-search-input
         />
         <button class="search-bar__button">
           <img
