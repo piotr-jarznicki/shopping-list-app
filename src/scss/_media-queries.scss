@@ -72,4 +72,22 @@
     color: $light-acc-clr;
     cursor: pointer;
   }
+
+  .products-info {
+    display: block;
+    height: auto;
+    order: 0;
+    width: 80%;
+    padding: 0 0.4em;
+    margin: 1em 0;
+    border: $radius;
+    background: $nav-el-clr;
+    &__text {
+      color: $light-acc-clr;
+    }
+  }
+
+  .products-info.mobile {
+    display: none;
+  }
 }

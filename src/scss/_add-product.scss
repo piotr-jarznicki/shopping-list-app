@@ -18,20 +18,31 @@
   color: $acc-clr;
 }
 
+.products-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+}
+
 .product {
   padding: 1.4em 0.5em;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size: 1.2rem;
-  margin: 3em 0;
-  width: 30vw;
+  // margin: 3em 0;
+  max-width: 600px;
+  margin: 3em auto;
+
+  width: 100%;
   @include btn-input-styles;
   background: $el-bcg;
 }
 
 .amount-span {
-  width: 4em;
+  padding: 0.5em;
   margin: 0 0.5em;
   font-size: 1rem;
   background: $light-acc-clr;
@@ -39,7 +50,7 @@
 }
 
 .category-span {
-  width: 5em;
+  padding: 0.5em;
   margin: 0;
   font-size: 1rem;
   background: $light-acc-clr;

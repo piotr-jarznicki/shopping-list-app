@@ -11,14 +11,27 @@ main {
 }
 
 .products-info {
-  width: 80%;
+  display: none;
+  height: 100%;
+
+  order: 2;
+  width: 50%;
   padding: 0 0.4em;
-  margin: 1em 0;
+  margin: 0 auto;
   border: $radius;
   background: $nav-el-clr;
   &__text {
     color: $light-acc-clr;
   }
+}
+
+.products-info.mobile {
+  display: none;
+  width: 100%;
+}
+
+.products-info__text {
+  display: flex;
 }
 
 .active {
