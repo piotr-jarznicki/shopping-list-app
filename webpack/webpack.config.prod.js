@@ -1,14 +1,15 @@
-const Webpack = require('webpack');
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const Webpack = require("webpack");
+const merge = require("webpack-merge");
+const common = require("./webpack.common.js");
+
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = merge(common, {
-  mode: 'production',
-  devtool: 'source-map',
-  stats: 'errors-only',
+  mode: "production",
+  devtool: "source-map",
+  stats: "errors-only",
   bail: true,
   optimization: {
     minimizer: [
@@ -29,7 +30,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new Webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      "process.env.NODE_ENV": JSON.stringify("production"),
     }),
     new Webpack.optimize.ModuleConcatenationPlugin(),
   ],
@@ -38,7 +39,7 @@ module.exports = merge(common, {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: "babel-loader",
       },
     ],
   },
