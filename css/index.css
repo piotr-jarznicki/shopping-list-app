@@ -95,14 +95,22 @@ main {
   color: #8ba8e5;
 }
 
+.products-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .product {
   padding: 1.4em 0.5em;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size: 1.2rem;
-  margin: 3em 0;
-  width: 30vw;
+  max-width: 600px;
+  margin: 3em auto;
+  width: 100%;
   color: #959595;
   border-radius: 2px;
   border: none;
@@ -111,7 +119,7 @@ main {
 }
 
 .amount-span {
-  width: 4em;
+  padding: 0.5em;
   margin: 0 0.5em;
   font-size: 1rem;
   background: #e6edfc;
@@ -119,7 +127,7 @@ main {
 }
 
 .category-span {
-  width: 5em;
+  padding: 0.5em;
   margin: 0;
   font-size: 1rem;
   background: #e6edfc;
@@ -226,6 +234,10 @@ a {
   background: #173246;
 }
 
+.header__button {
+  order: 3;
+}
+
 input,
 select {
   font-family: "Sniglet", cursive;
@@ -323,15 +335,27 @@ main {
 }
 
 .products-info {
-  width: 80%;
+  display: none;
+  height: 100%;
+  order: 2;
+  width: 50%;
   padding: 0 0.4em;
-  margin: 1em 0;
+  margin: 0 auto;
   border: 2px;
   background: #294254;
 }
 
 .products-info__text {
   color: #e6edfc;
+}
+
+.products-info.mobile {
+  display: none;
+  width: 100%;
+}
+
+.products-info__text {
+  display: flex;
 }
 
 .active {
@@ -357,6 +381,7 @@ main {
 }
 
 .nav__item {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -364,13 +389,15 @@ main {
 }
 
 .nav__list {
+  text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-  width: 10em;
+  width: 100%;
+  padding: 1em 2em;
   gap: 15px;
-  margin-top: 1.5em;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .list__image {
@@ -393,6 +420,10 @@ main {
 
 .display {
   display: flex;
+}
+
+.display-block {
+  display: block;
 }
 
 @media (min-width: 1024px) {
@@ -458,6 +489,22 @@ main {
     background: #8ba8e5;
     color: #e6edfc;
     cursor: pointer;
+  }
+  .products-info {
+    display: block;
+    height: auto;
+    order: 0;
+    width: 80%;
+    padding: 0 0.4em;
+    margin: 1em 0;
+    border: 2px;
+    background: #294254;
+  }
+  .products-info__text {
+    color: #e6edfc;
+  }
+  .products-info.mobile {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */
