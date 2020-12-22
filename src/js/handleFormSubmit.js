@@ -6,6 +6,7 @@ import { submitFormButton } from "./htmlHandler";
 import { renderProducts } from "./renderProducts";
 const handleFormSubmit = (e) => {
   e.preventDefault();
+
   const product = getUserInput();
   const isFormDataValid = validateForm();
   isFormDataValid ? setProductToLocalStorage(JSON.stringify(product)) : false;

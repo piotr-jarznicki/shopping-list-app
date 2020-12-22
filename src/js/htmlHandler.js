@@ -13,3 +13,4 @@ export const productsCategoryList = getAll("[data-category]");
 export const categorySpanText = get("[data-category-span]");
 export const removeProductsButton = get("[data-remove-products]");
 export const searchInput = get("[data-search-input]");
+export const box = get(".products-info");
