@@ -54,13 +54,28 @@ export const createProducts = () => {
       null,
       removeProduct
     );
+
+    const productText = createHtmlElement(
+      "span",
+      null,
+      null,
+      null,
+      null,
+      product.name,
+      null
+    );
     const htmlProduct = createHtmlElement(
       "li",
       null,
       product.id,
       "product",
-      [productAmountSpan, productCategorySpan, removeProductButton],
-      product.name,
+      [
+        productText,
+        productAmountSpan,
+        productCategorySpan,
+        removeProductButton,
+      ],
+      null,
       null
     );
 

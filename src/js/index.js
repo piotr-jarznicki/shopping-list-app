@@ -10,3 +10,4 @@ import "./handleFormSubmit";
 import "./handleClick";
 import "./removeProduct";
 import "./removeAllProducts";
+import "./searchProduct";
