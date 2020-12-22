@@ -1,4 +1,3 @@
-![](/src/img/logo.png)
 
 # Shopping list app 
 
@@ -15,6 +14,7 @@ Project created with the use of:
 
 * Adding new product (name, category, amount, amount type (kilos, pieces)
 * Searching through products based on active category
+* Browsing through product categories
 * Removing product
 * Removing all products at once
 
