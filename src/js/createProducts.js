@@ -1,6 +1,7 @@
 import { getProductsInfo } from "./getProductsInfo";
 import { removeProduct } from "./removeProduct";
 import { setProductsAmountInfo } from "./setProductsAmountInfo";
+import { createHtmlElement } from "./createHtmlElement";
 export const createProducts = () => {
   const products = [];
   const htmlProducts = [];
@@ -11,29 +12,63 @@ export const createProducts = () => {
   }
 
   products.forEach((product) => {
-    const htmlProduct = document.createElement("li");
-    const amountSpan = document.createElement("div");
-    const categorySpan = document.createElement("div");
-    const removeProductButton = document.createElement("button");
-    const buttonIcon = document.createElement("img");
+    //  to use: element, imgSrc, id cssClass, children, content, listener;
 
-    buttonIcon.src = "./img/icons/trash-icon.svg";
-    buttonIcon.classList.add("button-icon");
-    categorySpan.classList.add("category-span");
-    amountSpan.classList.add("amount-span");
-    htmlProduct.classList.add("product");
-    removeProductButton.classList.add("remove-product-button");
-    removeProductButton.addEventListener("click", removeProduct);
-    product.amountType === "Kilos"
-      ? (amountSpan.textContent = product.amount + " " + "kg")
-      : (amountSpan.textContent = product.amount + " " + "pc");
-    htmlProduct.textContent = product.name;
-    htmlProduct.id = product.id;
-    categorySpan.textContent = product.category;
-    htmlProduct.appendChild(amountSpan);
-    htmlProduct.appendChild(categorySpan);
-    removeProductButton.appendChild(buttonIcon);
-    htmlProduct.appendChild(removeProductButton);
+    const amountContent =
+      product.amountType === "Kilos"
+        ? product.amount + " " + "kg"
+        : product.amount + " " + "pc";
+
+    const productCategorySpan = createHtmlElement(
+      "span",
+      null,
+      null,
+      "category-span",
+      null,
+      product.category,
+      null
+    );
+
+    const productAmountSpan = createHtmlElement(
+      "span",
+      null,
+      null,
+      "amount-span",
+      null,
+      amountContent,
+      null
+    );
+
+    const buttonIcon = createHtmlElement(
+      "img",
+      "./img/icons/trash-icon.svg",
+      null,
+      "button-icon",
+      null,
+      null,
+      null
+    );
+
+    const removeProductButton = createHtmlElement(
+      "button",
+      null,
+      null,
+      "remove-product-button",
+      buttonIcon,
+      null,
+      removeProduct
+    );
+
+    const htmlProduct = createHtmlElement(
+      "li",
+      null,
+      product.id,
+      "product",
+      [productAmountSpan, productCategorySpan, removeProductButton],
+      product.name,
+      null
+    );
+
     htmlProducts.push(htmlProduct);
   });
   const productsAmountInfo = getProductsInfo(products);
