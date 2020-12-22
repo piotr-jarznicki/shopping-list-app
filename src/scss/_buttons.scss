@@ -56,6 +56,7 @@ a {
   padding: 1em 0.5em;
   transition: 0.3s;
   @include btn-input-styles;
+  background: $el-bcg;
   transition: 0.3s;
 }
 
