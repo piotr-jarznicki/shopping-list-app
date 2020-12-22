@@ -9,3 +9,4 @@ import "./renderProducts";
 import "./handleFormSubmit";
 import "./handleClick";
 import "./removeProduct";
+import "./removeAllProducts";
