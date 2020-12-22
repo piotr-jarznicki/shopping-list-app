@@ -1,8 +1,10 @@
 import { removeProductsButton } from "./htmlHandler";
 import { renderProducts } from "./renderProducts";
 export const removeAllProducts = () => {
-  localStorage.clear();
-  renderProducts();
+  if (localStorage.length >= 2) {
+    localStorage.clear();
+    renderProducts(currentActiveCategory);
+  }
 };
 
 removeProductsButton.addEventListener("click", removeAllProducts);
